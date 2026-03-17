@@ -5,7 +5,16 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+
+    The game looked like a guessing game.
+
 - List at least two concrete bugs you noticed at the start  
+
+    1. The first bug I noticed is the the hint always told me to guess a higher number when the actual score is lower.
+       Or vice versa, the game told me to go lower when the actual number is higher.
+    2. Another bug is that if I guess the number is off the correct number by 1, it would automatically gaveover even if i had some attempts left. You can win only if you hit the number directly.
+    3. It would not start a new game.
+
   (for example: "the secret number kept changing" or "the hints were backwards").
 
 ---

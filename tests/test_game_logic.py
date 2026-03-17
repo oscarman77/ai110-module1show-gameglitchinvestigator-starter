@@ -40,3 +40,12 @@ def test_too_low_message_does_not_say_go_lower():
     # Regression guard: the old buggy message "Go LOWER!" must not appear when guess is too low
     outcome, message = check_guess(30, 50)
     assert "LOWER" not in message, f"Backwards hint bug detected: got '{message}' for a too-low guess"
+
+def test_close_guess_below_teens_secret_is_too_low():
+    # Regression guard for the string-secret bug in app.py:
+    # When secret was cast to str on even attempts, lexicographic comparison
+    # made "9" > "10" evaluate to True, incorrectly returning "Too High".
+    # A guess of 9 with secret 10 must be "Too Low", not "Too High".
+    outcome, message = check_guess(9, 10)
+    assert outcome == "Too Low", f"Expected 'Too Low' but got '{outcome}' — string comparison bug may have returned wrong direction"
+    assert "HIGHER" in message
