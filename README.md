@@ -25,9 +25,12 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ Y ] Describe the game's purpose.
-- [ Y ] Detail which bugs you found.
-- [ Y ] Explain what fixes you applied.
+- [ ] Describe the game's purpose.
+The game's purpose is to correctly guess the secret number with a certain amount of attempts.
+- [ ] Detail which bugs you found.
+There were multiple bugs like backwards hint, even numbers causing an error, and games could not be restarted.
+- [ ] Explain what fixes you applied.
+I applied logic fixes and reexamining code meaning.
 
 ## 📸 Demo
 
